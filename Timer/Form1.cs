@@ -40,7 +40,7 @@ namespace Timer_
                 timer.Start();
                 state = true;
             }
-            else 
+            else
             {
                 data = DateTime.Now;
                 timer.Stop();
@@ -59,20 +59,31 @@ namespace Timer_
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
             string id = (string)textBox1.Text;
-            if(id != " ")
+            if (id.Length <= 3)
             {
                 label2.Text = id;
             }
             else
             {
-                label2.Text = "You nihuya ne vellu!";
+                label2.Text = "Your ID very big!";
             }
             //id += new EventHandler(label3_Click);
         }
 
         private void label2_Click_1(object sender, EventArgs e) { }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string gold = (string)textBox2.Text;
+            label4.Text = gold;
+        }
         //private void button1_Click(object sender, EventArgs e)
         //{
         //    data = DateTime.Now;
