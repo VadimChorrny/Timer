@@ -48,6 +48,31 @@ namespace Timer_
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+            string id = (string)textBox1.Text;
+            if(id != " ")
+            {
+                label2.Text = id;
+            }
+            else
+            {
+                label2.Text = "You nihuya ne vellu!";
+            }
+            //id += new EventHandler(label3_Click);
+        }
+
+        private void label2_Click_1(object sender, EventArgs e) { }
         //private void button1_Click(object sender, EventArgs e)
         //{
         //    data = DateTime.Now;
