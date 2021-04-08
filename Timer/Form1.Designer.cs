@@ -29,30 +29,9 @@ namespace Timer_
         /// </summary>
         private void InitializeComponent()
         {
-            this.stopButton = new System.Windows.Forms.Button();
-            this.startButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // stopButton
-            // 
-            this.stopButton.Location = new System.Drawing.Point(81, 285);
-            this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(224, 76);
-            this.stopButton.TabIndex = 0;
-            this.stopButton.Text = "STOP";
-            this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // startButton
-            // 
-            this.startButton.Location = new System.Drawing.Point(496, 285);
-            this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(224, 76);
-            this.startButton.TabIndex = 1;
-            this.startButton.Text = "START";
-            this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -65,14 +44,23 @@ namespace Timer_
             this.label1.Text = "Timer Yopta";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(280, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(264, 160);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Click";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.startButton);
-            this.Controls.Add(this.stopButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -81,10 +69,8 @@ namespace Timer_
         }
 
         #endregion
-
-        private System.Windows.Forms.Button stopButton;
-        private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

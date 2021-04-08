@@ -15,6 +15,7 @@ namespace Timer_
     {
         public DateTime data = new DateTime();
         Timer timer = new Timer();
+        public bool state = false;
         public Stopwatch sw = new Stopwatch();
         public Form1()
         {
@@ -31,16 +32,34 @@ namespace Timer_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            data = DateTime.Now;
-            timer.Stop();
+            if (!state)
+            {
+                data = DateTime.Now;
+                timer.Interval = 10;
+                timer.Tick += new EventHandler(label1_Click);
+                timer.Start();
+                state = true;
+            }
+            else 
+            {
+                data = DateTime.Now;
+                timer.Stop();
+                state = false;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            data = DateTime.Now;
-            timer.Interval = 10;
-            timer.Tick += new EventHandler(label1_Click);
-            timer.Start();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    data = DateTime.Now;
+        //    timer.Stop();
+        //}
+
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    data = DateTime.Now;
+        //    timer.Interval = 10;
+        //    timer.Tick += new EventHandler(label1_Click);
+        //    timer.Start();
+        //}
     }
 }
